@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:toku/widgets/category.dart';
 
 void main() {
   runApp(const Toku());
@@ -23,7 +24,14 @@ class Toku extends StatelessWidget {
             ),
           ),
         ),
-        body: const Center(child: Text('Tokuuuu app!!')),
+        body: Column(
+          children: [
+            Category(categoryName: 'Members', color: Color(0xffF2902F)),
+            Category(categoryName: 'Family Members', color: Color(0xff507C30)),
+            Category(categoryName: 'Colors', color: Color(0xff793D9D)),
+            Category(categoryName: 'Pharases', color: Color(0xff44A0C4)),
+          ],
+        ),
       ),
     );
   }
