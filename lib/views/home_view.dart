@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:toku/widgets/category.dart';
+import 'package:toku/widgets/category_item.dart';
 
 class HomeView extends StatelessWidget {
   const HomeView({super.key});
