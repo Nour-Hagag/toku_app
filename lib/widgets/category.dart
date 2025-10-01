@@ -7,10 +7,11 @@ class Category extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.only(left: 15),
+      padding: EdgeInsets.only(left: 16),
       alignment: Alignment.centerLeft,
       height: 70,
       width: MediaQuery.of(context).size.width,
+      //or : double.infinity
       color: color,
       child: Text(
         categoryName,
