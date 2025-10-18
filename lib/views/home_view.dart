@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:toku/views/family_view.dart';
 import 'package:toku/views/numbers_view.dart';
 import 'package:toku/widgets/category_item.dart';
 
@@ -35,7 +36,20 @@ class HomeView extends StatelessWidget {
               );
             },
           ),
-          Category(categoryName: 'Family Members', color: Color(0xff507C30)),
+          Category(
+            categoryName: 'Family Members',
+            color: Color(0xff507C30),
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) {
+                    return FamilyView();
+                  },
+                ),
+              );
+            },
+          ),
           Category(categoryName: 'Colors', color: Color(0xff793D9D)),
           Category(categoryName: 'Pharases', color: Color(0xff44A0C4)),
         ],
