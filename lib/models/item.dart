@@ -1,7 +1,19 @@
-class Item {
-  String enName;
-  String jpName;
-  String imegeName;
-  String sound;
-  Item(this.enName, this.jpName, this.imegeName, this.sound);
+import 'package:audioplayers/audioplayers.dart';
+
+class ItemModel {
+  final String enName;
+  final String jpName;
+  final String? image;
+  final String sound;
+
+  const ItemModel({
+    required this.enName,
+    required this.jpName,
+    this.image,
+    required this.sound,
+  });
+  playSound() async {
+    final player = AudioPlayer();
+    await player.play(AssetSource(sound));
+  }
 }
