@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:toku/views/colors_view.dart';
 import 'package:toku/views/family_view.dart';
 import 'package:toku/views/numbers_view.dart';
+import 'package:toku/views/pharases_view.dart';
 import 'package:toku/widgets/category_item.dart';
 
 class HomeView extends StatelessWidget {
@@ -50,8 +52,34 @@ class HomeView extends StatelessWidget {
               );
             },
           ),
-          Category(categoryName: 'Colors', color: Color(0xff793D9D)),
-          Category(categoryName: 'Pharases', color: Color(0xff44A0C4)),
+          Category(
+            categoryName: 'Colors',
+            color: Color(0xff793D9D),
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) {
+                    return ColorsView();
+                  },
+                ),
+              );
+            },
+          ),
+          Category(
+            categoryName: 'Pharases',
+            color: Color(0xff44A0C4),
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) {
+                    return PharasesView();
+                  },
+                ),
+              );
+            },
+          ),
         ],
       ),
     );

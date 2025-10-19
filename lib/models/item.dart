@@ -9,7 +9,7 @@ class ItemModel {
   const ItemModel({
     required this.enName,
     required this.jpName,
-    required this.image,
+    this.image,
     required this.sound,
   });
   playSound() async {
