@@ -2,13 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:toku/models/item.dart';
 
 class ItemInfo extends StatelessWidget {
-  const ItemInfo({super.key, required this.item});
+  const ItemInfo({super.key, required this.item, required this.color});
   final ItemModel item;
+  final Color color;
   @override
   Widget build(BuildContext context) {
     return Container(
       height: 100,
-      color: Color(0xffF2902F),
+      color: color,
       child: Row(
         children: [
           Container(
