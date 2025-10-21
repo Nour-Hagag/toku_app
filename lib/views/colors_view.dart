@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:toku/models/item.dart';
-import 'package:toku/widgets/item_info.dart';
+import 'package:toku/widgets/item_list.dart';
 
 class ColorsView extends StatelessWidget {
   const ColorsView({super.key});
@@ -14,7 +14,7 @@ class ColorsView extends StatelessWidget {
     ItemModel(
       enName: 'Brown',
       jpName: 'Chairo',
-      sound: 'sounds/colors/browm.wav',
+      sound: 'sounds/colors/brown.wav',
       image: 'assets/images/colors/color_brown.png',
     ),
     ItemModel(
@@ -68,7 +68,7 @@ class ColorsView extends StatelessWidget {
       body: ListView.builder(
         itemCount: items.length,
         itemBuilder: (context, index) {
-          return ItemInfo(item: items[index], color: Color(0xff793D9D));
+          return ItemList(item: items[index], color: Color(0xff793D9D));
         },
       ),
     );

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:toku/models/item.dart';
-import 'package:toku/widgets/item_info.dart';
+import 'package:toku/widgets/item_list.dart';
 
 class FamilyView extends StatelessWidget {
   const FamilyView({super.key});
@@ -80,7 +80,7 @@ class FamilyView extends StatelessWidget {
       body: ListView.builder(
         itemCount: items.length,
         itemBuilder: (context, index) {
-          return ItemInfo(item: items[index], color: Color(0xff507C30));
+          return ItemList(item: items[index], color: Color(0xff507C30));
         },
       ),
     );
